@@ -1,0 +1,52 @@
+﻿@model LojaNicholas.Models.Clientes
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+<hr />
+<h3>Você realmente gostaria de deletar este cliente?</h3>
+<hr />
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CdCl)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CdCl)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DsNome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DsNome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdTipo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdTipo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CdVend)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CdVend)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DsLim)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DsLim)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Voltar para Lista</a>
+    </form>
+</div>
